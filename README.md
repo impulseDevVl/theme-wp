@@ -6,7 +6,7 @@
 
 Скачать репозиторий
 ```sh
-cd gulp
+cd theme-wp
 npm i
 ```
 ## Libraries
