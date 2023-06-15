@@ -2,7 +2,7 @@
 // правильный способ подключить стили и скрипты
 add_action('wp_enqueue_scripts', function () {
     
-    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/style.min.css');
+    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/style.min.css?'.time(), array(), null );
 
     //wp_deregister_script('jquery');
     // wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
