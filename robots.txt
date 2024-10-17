@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Crawl-delay: 120
+Disallow: /
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Yandex
+Allow: /
+
+User-Agent: Mail.ru
+Allow: /
+
+User-Agent: Amazonbot
+Disallow: /

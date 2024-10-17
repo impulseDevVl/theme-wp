@@ -1,7 +1,13 @@
 <?php get_header(); ?>
-<div class="page">
+<section class="page">
     <div class="container">
-        <h1><?php the_title(); ?></h1>
+        <div class="woocommerce-breadcrumb">
+            <?php echo bcn_display(); ?>
+        </div>
+        <h1 class="title-l mb-3"><?php the_title(); ?></h1>
+        <div class="section simple-page">
+            <?php the_content(); ?>
+        </div>
     </div>
-</div>
+</section>
 <?php get_footer(); ?>

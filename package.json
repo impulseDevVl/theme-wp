@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vadym Prokopchuk",
+  "author": "Regina Andrievich",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
@@ -15,12 +15,12 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1"
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
+    "gulp-dart-sass": "^1.1.0",
     "normalize.css": "^8.0.1",
     "swiper": "^8.4.4"
   }

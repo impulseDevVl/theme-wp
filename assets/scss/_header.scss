@@ -1,0 +1,1308 @@
+header:not(.woocommerce-products-header) {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: -170px;
+
+    @media only screen and (max-width: 750px) {
+        top: -76px;
+    }
+
+    &:not(.woocommerce-products-header) {
+        z-index: 999;
+    }
+
+    &.scrolled .headerBottomWrapper {
+        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    .headerBottomLogos {
+        width: 161px;
+        height: 78px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .headerTopWrapper {
+        width: 100%;
+        background-color: $grey-100;
+        @include centering;
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+
+        .headerTopInner {
+            max-width: 1440px;
+            width: 100%;
+            padding: 6px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 1400px) {
+                max-width: 100%;
+                padding: 6px 0px;
+            }
+
+            .headerTopLink {
+                a {
+                    @include centering;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -0.14px;
+                        @include transition;
+                    }
+
+                    i {
+                        margin-left: 5px;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    &:hover {
+                        span {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-item.with-arrow {
+        a {
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px solid transparent;
+            padding: 4px 8px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+        }
+
+        a:active {
+            border-color: $black;
+
+            span {
+                color: $black !important;
+            }
+        }
+    }
+
+    .headerMiddleWrapper {
+        width: 100%;
+        @include centering;
+        background-color: $primary;
+
+        @media only screen and (max-width: 750px) {
+            background-color: $grey-100;
+        }
+
+        .headerMiddleInner {
+            max-width: 1440px;
+            width: 100%;
+            padding: 15px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media only screen and (max-width: 1400px) {
+                max-width: 100%;
+                padding: 15px 0px;
+                flex-wrap: nowrap;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                justify-content: space-between;
+            }
+
+            .headerMiddleAddressIconWrapper {
+                display: flex;
+                align-items: center;
+
+                @media only screen and (max-width: 750px) {
+                    justify-content: flex-start;
+                    grid-gap: 15px;
+                    width: 100%;
+                }
+
+                .headerMiddleLogosWrapper {
+                    display: none;
+
+                    @media only screen and (max-width: 750px) {
+                        @include centering;
+
+
+                        .headerBottomLogos {
+                            width: 93px;
+                            height: 46px;
+                            @include centering;
+
+                            // .headerBottomLogo {
+
+                            //     img {
+                            //         max-width: 44px;
+                            //         height: auto;
+                            //     }
+                            // }
+                        }
+
+                    }
+                }
+
+                .headerMiddleMenuIcon {
+                    display: none;
+                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='10' fill='white'/%3E%3Cpath d='M12 20H28M12 25H28M12 30H28' stroke='%231F1F1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.416 14V9.952L12.744 13.024H12.216L10.536 9.952V14H9.64V8.32H10.6L12.48 11.792L14.36 8.32H15.32V14H14.416ZM18.2346 14.08C17.9093 14.08 17.6133 14.024 17.3466 13.912C17.0853 13.7947 16.8586 13.6373 16.6666 13.44C16.4746 13.2373 16.3253 13.008 16.2186 12.752C16.1173 12.4907 16.0666 12.2133 16.0666 11.92C16.0666 11.5253 16.1573 11.1653 16.3386 10.84C16.52 10.5093 16.7733 10.2453 17.0986 10.048C17.424 9.84533 17.8053 9.744 18.2426 9.744C18.68 9.744 19.056 9.84533 19.3706 10.048C19.6906 10.2453 19.9386 10.5067 20.1146 10.832C20.2906 11.1573 20.3786 11.5067 20.3786 11.88C20.3786 11.944 20.376 12.0053 20.3706 12.064C20.3653 12.1173 20.36 12.1627 20.3546 12.2H17.0026C17.0186 12.4453 17.0853 12.6613 17.2026 12.848C17.3253 13.0293 17.48 13.1733 17.6666 13.28C17.8533 13.3813 18.0533 13.432 18.2666 13.432C18.5013 13.432 18.7226 13.3733 18.9306 13.256C19.144 13.1387 19.288 12.984 19.3626 12.792L20.1146 13.008C20.024 13.2107 19.8853 13.3947 19.6986 13.56C19.5173 13.72 19.3013 13.848 19.0506 13.944C18.8 14.0347 18.528 14.08 18.2346 14.08ZM16.9786 11.616H19.5066C19.4906 11.376 19.4213 11.1653 19.2986 10.984C19.1813 10.7973 19.0293 10.6533 18.8426 10.552C18.6613 10.4453 18.4586 10.392 18.2346 10.392C18.016 10.392 17.8133 10.4453 17.6266 10.552C17.4453 10.6533 17.296 10.7973 17.1786 10.984C17.0613 11.1653 16.9946 11.376 16.9786 11.616ZM21.0164 14V9.816H21.8964V11.48H23.8404V9.816H24.7204V14H23.8404V12.24H21.8964V14H21.0164ZM29.3021 14.08C28.9341 14.08 28.6061 14.0027 28.3181 13.848C28.0354 13.6933 27.8061 13.4827 27.6301 13.216C27.4594 12.944 27.3501 12.6373 27.3021 12.296H26.5821V14H25.7021V9.816H26.5821V11.528H27.3021C27.3501 11.176 27.4621 10.8667 27.6381 10.6C27.8194 10.328 28.0514 10.1173 28.3341 9.968C28.6167 9.81867 28.9394 9.744 29.3021 9.744C29.7394 9.744 30.1127 9.84267 30.4221 10.04C30.7314 10.2373 30.9687 10.4987 31.1341 10.824C31.2994 11.1493 31.3821 11.512 31.3821 11.912C31.3821 12.3227 31.2967 12.6907 31.1261 13.016C30.9607 13.3413 30.7207 13.6 30.4061 13.792C30.0967 13.984 29.7287 14.08 29.3021 14.08ZM29.3021 13.328C29.5367 13.328 29.7421 13.2693 29.9181 13.152C30.0941 13.0293 30.2327 12.864 30.3341 12.656C30.4354 12.4427 30.4861 12.1947 30.4861 11.912C30.4861 11.624 30.4354 11.376 30.3341 11.168C30.2327 10.9547 30.0914 10.7893 29.9101 10.672C29.7287 10.5547 29.5261 10.496 29.3021 10.496C29.0781 10.496 28.8781 10.5547 28.7021 10.672C28.5314 10.7893 28.3981 10.9547 28.3021 11.168C28.2061 11.3813 28.1581 11.6293 28.1581 11.912C28.1581 12.2 28.2061 12.4507 28.3021 12.664C28.4034 12.8773 28.5394 13.0427 28.7101 13.16C28.8861 13.272 29.0834 13.328 29.3021 13.328Z' fill='%231F1F1F'/%3E%3C/svg%3E%0A");
+                    width: 40px;
+                    height: 40px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    &.open {
+                        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='10' fill='white'/%3E%3Cpath d='M12 28L28 12M12 12L28 28' stroke='%231F1F1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+
+                    @media only screen and (max-width: 1000px) {
+                        @include centering;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                        display: none;
+                    }
+                }
+
+                .headerMiddleAddressWrapper {
+                    display: flex;
+                    align-items: center;
+
+                    .headerMiddleAddressIcon {
+                        margin-right: 8px;
+                    }
+
+                    .headerMiddleAddressInner {
+                        .headerMiddleAddressItem {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 120%;
+                            letter-spacing: -0.16px;
+                            color: $black;
+
+                            &:last-child {
+                                margin-top: 2px;
+                            }
+
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 14px;
+                                letter-spacing: -0.14px;
+                            }
+
+                            @media only screen and (max-width: 750px) {
+                                font-size: 12px;
+                                letter-spacing: -0.12px;
+                            }
+                        }
+                    }
+
+                    @media only screen and (max-width: 999px) {
+                        display: none;
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        display: flex;
+                    }
+                }
+            }
+
+            // .headerMiddleSeparator {
+            //     background-color: $black;
+            //     margin: 0 20px;
+            //     width: 1px;
+            //     height: 20px;
+
+            //     @media only screen and (max-width: 1400px) {
+            //         margin: 0 10px;
+            //     }
+
+            //     @media only screen and (max-width: 1279px) {
+            //         display: none;
+            //     }
+            // }
+
+            .headerMiddleWorkingTimeWrapper {
+                margin-top: 10px;
+                color: $black;
+                display: flex;
+                align-items: center;
+                grid-gap: 15px;
+
+                @media only screen and (max-width: 1400px) {
+                    flex-direction: column;
+                    margin-top: 0px;
+                    order: 2;
+                }
+
+                @media only screen and (max-width: 1439px) {
+                    display: none;
+                }
+
+                .headerMiddleWorkingTimeTitle {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    letter-spacing: -0.14px;
+                }
+
+                .headerMiddleWorkingTimeItem {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: -0.16px;
+                    margin-bottom: 2px;
+
+                    br {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @media only screen and (max-width: 1400px) {
+                        font-size: 14px;
+
+                        br {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .headerMiddleButtonsWrapper {
+                margin-left: 70px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                @media only screen and (max-width: 1400px) {
+                    margin-left: 15px;
+                    order: 3;
+                }
+
+                @media only screen and (max-width: 1439px) {
+                    margin-left: 0;
+                }
+
+                @media only screen and (max-width: 800px) {
+                    margin-left: 15px;
+                }
+
+                @media only screen and (max-width: 750px) {
+                    display: none;
+                }
+
+                .headerMiddleButtonWrapper {
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    width: fit-content;
+
+                    @media only screen and (max-width: 1439px) {
+                        margin-left: 10px;
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+
+                    // @media only screen and (max-width: 1279px) {
+                    //     &:last-child {
+                    //         display: none;
+                    //     }
+                    // }
+
+                    @media only screen and (max-width: 1000px) {
+                        &:nth-child(3) {
+                            display: none;
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+
+                    .headerMiddleButtonPhone {
+                        a {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 120%;
+                            letter-spacing: -0.16px;
+                            color: $black;
+                        }
+
+                        a:active {
+                            color: $danger;
+                        }
+                    }
+
+                    .headerMiddleButton {
+                        margin-top: 5px;
+                        @include centering;
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            @include centering;
+                            padding: 7.5px 8px 7px 10px;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            @include transition;
+                            border: 1px solid transparent;
+
+                            &:hover {
+                                border-color: $black;
+                            }
+
+                            @media only screen and (max-width: 1000px) {
+                                padding: 5px 6px 5px 8px;
+                            }
+
+                            span {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                letter-spacing: -0.14px;
+                                color: $black;
+                            }
+
+                            svg {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .headerBottomWrapper {
+        width: 100%;
+        @include centering;
+        background-color: #fff;
+        transition: box-shadow .3s;
+
+        @media only screen and (max-width: 750px) {
+            background-color: $primary;
+        }
+
+        .headerBottomInner {
+            max-width: 1440px;
+            width: 100%;
+            padding: 8px 0px;
+            display: flex;
+            align-items: center;
+
+            @media only screen and (max-width: 1400px) {
+                max-width: 100%;
+                padding: 8px 0px;
+                // justify-content: space-between;
+            }
+
+            .headerBottomMenuIcon {
+                display: none;
+                width: 40px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='10' fill='white'/%3E%3Cpath d='M12 20H28M12 25H28M12 30H28' stroke='%23FFD300' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.416 14V9.952L12.744 13.024H12.216L10.536 9.952V14H9.64V8.32H10.6L12.48 11.792L14.36 8.32H15.32V14H14.416ZM18.2346 14.08C17.9093 14.08 17.6133 14.024 17.3466 13.912C17.0853 13.7947 16.8586 13.6373 16.6666 13.44C16.4746 13.2373 16.3253 13.008 16.2186 12.752C16.1173 12.4907 16.0666 12.2133 16.0666 11.92C16.0666 11.5253 16.1573 11.1653 16.3386 10.84C16.52 10.5093 16.7733 10.2453 17.0986 10.048C17.424 9.84533 17.8053 9.744 18.2426 9.744C18.68 9.744 19.056 9.84533 19.3706 10.048C19.6906 10.2453 19.9386 10.5067 20.1146 10.832C20.2906 11.1573 20.3786 11.5067 20.3786 11.88C20.3786 11.944 20.376 12.0053 20.3706 12.064C20.3653 12.1173 20.36 12.1627 20.3546 12.2H17.0026C17.0186 12.4453 17.0853 12.6613 17.2026 12.848C17.3253 13.0293 17.48 13.1733 17.6666 13.28C17.8533 13.3813 18.0533 13.432 18.2666 13.432C18.5013 13.432 18.7226 13.3733 18.9306 13.256C19.144 13.1387 19.288 12.984 19.3626 12.792L20.1146 13.008C20.024 13.2107 19.8853 13.3947 19.6986 13.56C19.5173 13.72 19.3013 13.848 19.0506 13.944C18.8 14.0347 18.528 14.08 18.2346 14.08ZM16.9786 11.616H19.5066C19.4906 11.376 19.4213 11.1653 19.2986 10.984C19.1813 10.7973 19.0293 10.6533 18.8426 10.552C18.6613 10.4453 18.4586 10.392 18.2346 10.392C18.016 10.392 17.8133 10.4453 17.6266 10.552C17.4453 10.6533 17.296 10.7973 17.1786 10.984C17.0613 11.1653 16.9946 11.376 16.9786 11.616ZM21.0164 14V9.816H21.8964V11.48H23.8404V9.816H24.7204V14H23.8404V12.24H21.8964V14H21.0164ZM29.3021 14.08C28.9341 14.08 28.6061 14.0027 28.3181 13.848C28.0354 13.6933 27.8061 13.4827 27.6301 13.216C27.4594 12.944 27.3501 12.6373 27.3021 12.296H26.5821V14H25.7021V9.816H26.5821V11.528H27.3021C27.3501 11.176 27.4621 10.8667 27.6381 10.6C27.8194 10.328 28.0514 10.1173 28.3341 9.968C28.6167 9.81867 28.9394 9.744 29.3021 9.744C29.7394 9.744 30.1127 9.84267 30.4221 10.04C30.7314 10.2373 30.9687 10.4987 31.1341 10.824C31.2994 11.1493 31.3821 11.512 31.3821 11.912C31.3821 12.3227 31.2967 12.6907 31.1261 13.016C30.9607 13.3413 30.7207 13.6 30.4061 13.792C30.0967 13.984 29.7287 14.08 29.3021 14.08ZM29.3021 13.328C29.5367 13.328 29.7421 13.2693 29.9181 13.152C30.0941 13.0293 30.2327 12.864 30.3341 12.656C30.4354 12.4427 30.4861 12.1947 30.4861 11.912C30.4861 11.624 30.4354 11.376 30.3341 11.168C30.2327 10.9547 30.0914 10.7893 29.9101 10.672C29.7287 10.5547 29.5261 10.496 29.3021 10.496C29.0781 10.496 28.8781 10.5547 28.7021 10.672C28.5314 10.7893 28.3981 10.9547 28.3021 11.168C28.2061 11.3813 28.1581 11.6293 28.1581 11.912C28.1581 12.2 28.2061 12.4507 28.3021 12.664C28.4034 12.8773 28.5394 13.0427 28.7101 13.16C28.8861 13.272 29.0834 13.328 29.3021 13.328Z' fill='%23FFD300'/%3E%3C/svg%3E%0A");
+
+                &.open {
+                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='10' fill='white'/%3E%3Cpath d='M12 28L28 12M12 12L28 28' stroke='%23FFD300' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                }
+
+                @media only screen and (max-width: 750px) {
+                    @include centering;
+                }
+            }
+
+            a.custom-logo-link {
+                display: flex;
+
+                @media only screen and (max-width: 750px) {
+                    display: none;
+                }
+
+                .headerBottomLogos {
+                    display: flex;
+
+                    i .headerBottomLogo {
+                        &:last-child {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            .headerBottomCatalogSearchWrapper {
+                @include centering;
+
+                @media only screen and (max-width: 750px) {
+                    width: 92%;
+                    padding: 0 0px 0 20px;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    padding: 0 0px 0 10px;
+                    width: 88%;
+                }
+
+                .headerBottomCatalogButton {
+                    margin-left: 45px;
+                    background-color: $primary;
+                    @include centering;
+                    @include transition;
+                    padding: 10px 15px 10px 10px;
+                    border-radius: 30px;
+                    cursor: pointer;
+
+                    @media only screen and (max-width: 1439px) {
+                        margin-left: 20px;
+                    }
+
+                    @media only screen and (max-width: 1000px) {
+                        display: none;
+                    }
+
+                    svg {
+                        margin-right: 10px;
+                    }
+
+                    span {
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -0.16px;
+                    }
+
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
+
+                .headerBottomSearchWrapper {
+                    margin-left: 20px;
+
+                    @media only screen and (max-width: 1000px) {
+                        margin-left: 0;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                        width: 100%;
+                    }
+
+                    form {
+                        border-radius: 30px;
+                        width: 460px;
+                        border: 1px solid $primary;
+                        position: relative;
+
+                        @media only screen and (max-width: 1500px) {
+                            width: 450px;
+                        }
+
+                        @media only screen and (max-width: 1400px) {
+                            width: 350px;
+                        }
+
+                        @media only screen and (max-width: 1000px) {
+                            width: 50vw;
+                        }
+
+                        @media only screen and (max-width: 750px) {
+                            width: 100%;
+                        }
+
+                        input {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 120%;
+                            letter-spacing: -0.14px;
+                            color: $black;
+                            padding: 11px 124px 12px 15px;
+                            border-radius: 30px;
+                            border: none;
+                            height: 100%;
+                            width: 100%;
+                            appearance: textfield;
+                            outline-offset: -2px;
+
+                            @media only screen and (max-width: 750px) {
+                                background-color: $primary;
+                                border: 1px solid #fff;
+                                color: #fff;
+                                font-size: 16px;
+                                letter-spacing: -0.12px;
+                                padding: 11px 35px 12px 15px;
+
+                                &::placeholder {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            // @media only screen and (max-width: 1279px) {
+                            //     padding-right: 124px;
+                            // }
+
+                            &::-webkit-search-cancel-button,
+                            &::-webkit-search-decoration {
+                                appearance: none;
+                            }
+
+                            &::placeholder {
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 120%;
+                                letter-spacing: -0.14px;
+                                color: $grey;
+
+                                @media only screen and (max-width: 750px) {
+                                    color: #fff;
+                                    font-size: 12px;
+                                    letter-spacing: -0.12px;
+                                }
+                            }
+                        }
+
+                        button:not(.search-clean) {
+                            height: 100%;
+                            background-color: $primary;
+                            border-radius: 30px;
+                            padding: 9px 20px 10px 20px;
+                            border: 1px solid $primary;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            cursor: pointer;
+                            @include transition;
+
+                            &:hover {
+                                opacity: 0.85;
+                            }
+
+                            @media only screen and (max-width: 750px) {
+                                padding: 0;
+                                border: 0;
+                                height: fit-content;
+                                width: fit-content;
+                                top: 5px;
+                                right: 5px;
+                            }
+
+                            span {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+
+                                @media only screen and (max-width: 750px) {
+                                    display: none;
+                                }
+                            }
+
+                            i {
+                                display: none;
+
+                                @media only screen and (max-width: 750px) {
+                                    @include centering;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .headerBottomProfileCartWrapper {
+                @include centering;
+
+                .headerBottomProfileWrapper {
+                    @include centering;
+                    margin-left: 120px;
+                    width: fit-content;
+
+                    // @media only screen and (max-width: 1500px) {
+                    //     margin-left: 110px;
+                    // }
+
+                    @media only screen and (max-width: 1439px) {
+                        margin-left: 37px;
+                    }
+
+                    @media only screen and (max-width: 1279px) {
+                        display: none;
+                    }
+
+                    a {
+                        @include centering;
+
+                        .headerBottomProfileIcon {
+                            margin-right: 10px;
+
+                            svg {
+                                path {
+                                    @include transition;
+                                }
+                            }
+                        }
+
+                        .headerBottomProfile {
+                            display: flex;
+                            flex-direction: column;
+
+                            .headerBottomProfileName {
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+                                color: $black;
+                            }
+
+                            .headerBottomProfileLink {
+                                margin-top: 3px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+                                color: $grey;
+                                @include transition;
+                            }
+                        }
+
+                        &:hover {
+                            .headerBottomProfileIcon {
+                                svg {
+                                    path {
+                                        fill: $primary;
+                                    }
+                                }
+                            }
+
+                            .headerBottomProfile {
+                                .headerBottomProfileLink {
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .headerBottomCartWrapper {
+                    margin-left: 20px;
+
+                    @media only screen and (max-width: 1000px) {
+                        margin-left: 0;
+                    }
+
+                    @include centering;
+
+                    a {
+                        @include centering;
+
+                        .headerBottomCartMobileIcon {
+                            display: none;
+
+                            @media only screen and (max-width: 750px) {
+                                @include centering;
+                            }
+                        }
+
+                        .headerBottomCartIcon {
+                            margin-right: 10px;
+
+                            @media only screen and (max-width: 750px) {
+                                display: none;
+                            }
+
+                            svg {
+                                path {
+                                    @include transition;
+                                }
+                            }
+                        }
+
+                        .headerBottomCart {
+                            display: flex;
+                            flex-direction: column;
+
+                            @media only screen and (max-width: 750px) {
+                                display: none;
+                            }
+
+                            .headerBottomCartTitle {
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+                                color: $black;
+                                @include transition;
+                            }
+
+                            .headerBottomCartTotal {
+                                padding: 3px 8px 4px 8px;
+                                width: fit-content;
+                                @include centering;
+                                border-radius: 50px;
+                                color: #fff;
+                                background-color: $primary;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 120%;
+                                letter-spacing: -0.1px;
+                                margin-top: 3px;
+                            }
+                        }
+
+                        &:hover {
+                            .headerBottomCart {
+                                .headerBottomCartTitle {
+                                    color: $primary;
+                                }
+                            }
+
+                            .headerBottomCartIcon {
+                                svg {
+                                    path {
+                                        fill: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.burgerPopupWrapper {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    z-index: 1200;
+    @include transition;
+    display: none;
+
+    @media only screen and (max-width: 1000px) {
+        display: block;
+    }
+
+    @media only screen and (max-width: 750px) {
+        width: 100%;
+   
+    }
+
+    .burgerPopupCloseIconWrapper {
+        padding: 22.5px 20px;
+
+        .burgerPopupCloseIcon {
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 750px) {
+            padding: 89px 0 6px 14px;
+        }
+    }
+
+    .burgerPopupInner {
+        position: relative;
+        background-color: transparent;
+        height: 100vh;
+        overflow-y: scroll;
+
+        @media only screen and (max-width: 750px) {
+            width: 100%;
+        }
+
+        .burgerPopupContent {
+            background-color: $grey-100;
+            width: fit-content;
+            min-width: 270px;
+            padding: 15px 20px 85px 20px;
+
+            @media only screen and (max-width: 750px) {
+                min-width: 100%;
+                padding: 15px 20px 145px 20px;
+            }
+
+            .burgerPopupCatalogWrapper {
+                .burgerPopupCatalogButton {
+                    background-color: $primary;
+                    @include centering;
+                    @include transition;
+                    padding: 10px 15px 10px 10px;
+                    border-radius: 30px;
+                    cursor: pointer;
+
+                    @media only screen and (max-width: 750px) {
+                        padding: 10px 13.5px 10px 13.5px;
+                    }
+
+                    svg {
+                        margin-right: 10px;
+
+                        @media only screen and (max-width: 750px) {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        circle {
+                            @include transition;
+                        }
+
+                    }
+
+                    span {
+                        @include transition;
+                        color: $black;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -0.16px;
+
+                        @media only screen and (max-width: 750px) {
+                            font-size: 14px;
+                            letter-spacing: -0.14px;
+                        }
+                    }
+                }
+
+                .burgerPopupCatalogContent {
+                    overflow: hidden;
+                    -webkit-transition: all .7s ease-in-out;
+                    -moz-transition: all .7s ease-in-out;
+                    -o-transition: all .7s ease-in-out;
+                    -ms-transition: all .7s ease-in-out;
+                    transition: all .7s ease-in-out;
+
+                    .burgerPopupCatalogContentItem {
+                        margin-top: 15px;
+
+                        .burgerPopupCatalogContentItemTitle {
+                            display: flex;
+                            align-items: center;
+
+                            span {
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 120%;
+                                letter-spacing: -0.14px;
+                                color: $black;
+                            }
+
+                            i {
+                                margin-left: 10px;
+                                @include centering;
+
+                                svg {
+                                    @include transition;
+                                }
+                            }
+                        }
+
+                        .burgerPopupCatalogContentItemHidden {
+                            padding: 0 0 0 20px;
+                            overflow: hidden;
+                            -webkit-transition: all .7s ease-in-out;
+                            -moz-transition: all .7s ease-in-out;
+                            -o-transition: all .7s ease-in-out;
+                            -ms-transition: all .7s ease-in-out;
+                            transition: all .7s ease-in-out;
+
+                            .burgerPopupCatalogContentItemHiddenTitle {
+                                margin-top: 15px;
+
+                                &:first-child {
+                                    margin-top: 10px;
+                                }
+
+                                a {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 120%;
+                                    letter-spacing: -0.14px;
+                                    text-decoration-line: underline;
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
+
+                    .hiddenCatalogItem {
+                        .burgerPopupCatalogContentItemHidden {
+                            max-height: 0;
+                        }
+                    }
+
+                    .showCatalogItem {
+                        .burgerPopupCatalogContentItemTitle {
+                            i {
+                                svg {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        .burgerPopupCatalogContentItemHidden {
+                            max-height: 350px;
+                        }
+                    }
+                }
+            }
+
+            .burgerCatalogHidden {
+                .burgerPopupCatalogContent {
+                    max-height: 0;
+                }
+            }
+
+            .burgerCatalogShow {
+                .burgerPopupCatalogButton {
+                    background-color: $succes;
+
+                    span {
+                        color: #fff;
+                    }
+
+                    i {
+                        svg {
+                            circle {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .burgerPopupCatalogContent {
+                    max-height: 1050px;
+                }
+            }
+
+            .burgerPopupContentYellow {
+                margin-top: 15px;
+                background-color: $primary;
+                padding: 15px;
+                border-radius: 15px;
+
+                .burgerPopupProfile {
+                    display: flex;
+                    align-items: center;
+
+                    .burgerPopupProfileIcon {
+                        margin-right: 8px;
+                    }
+
+                    .burgerPopupProfileText {
+                        .burgerPopupProfileName {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 120%;
+                            letter-spacing: -0.16px;
+                            color: $black;
+
+                            @media only screen and (max-width: 750px) {
+                                font-size: 14px;
+                                letter-spacing: -0.14px;
+                            }
+                        }
+
+                        .burgerPopupProfileLink {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 120%;
+                            letter-spacing: -0.16px;
+                            color: #fff;
+
+                            @media only screen and (max-width: 750px) {
+                                font-size: 14px;
+                                letter-spacing: -0.14px;
+                            }
+                        }
+                    }
+                }
+
+                .burgerPopupButtonsWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 10px;
+
+                    a {
+                        .burgerPopupButton {
+                            width: auto;
+                            height: 100%;
+                            background-color: #fff;
+                            display: inline-flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 5px 10px 5px 10px;
+                            border-radius: 10px;
+                            margin-top: 10px;
+
+                            @media only screen and (max-width: 750px) {
+                                padding: 4px 10px 4px 10px;
+                            }
+
+                            span {
+                                color: $black;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                letter-spacing: -0.14px;
+
+                                @media only screen and (max-width: 750px) {
+                                    font-size: 12px;
+                                    letter-spacing: -0.12px;
+                                }
+                            }
+
+                            svg {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .burgerPopupPhoneWrapper {
+                    margin-top: 20px;
+
+                    .burgerPopupPhone {
+                        a {
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 120%;
+                            letter-spacing: -0.14px;
+                        }
+                    }
+                }
+
+                .burgerPopupPhoneWrapper2 {
+                    margin-top: 10px;
+                }
+
+                .burgerPopupAddressWorkingTimeWrapper {
+                    margin-top: 20px;
+
+                    .burgerPopupAddressWrapper {
+                        display: flex;
+                        align-items: center;
+
+                        .burgerPopupAddressIcon {
+                            margin-right: 10px;
+                        }
+
+                        .burgerPopupAddressText {
+                            .burgerPopupAddressItem {
+                                color: $black;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+
+                                @media only screen and (max-width: 750px) {
+                                    font-size: 14px;
+                                    letter-spacing: -0.14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .burgerPopupWorkingTimeWrapper {
+                        margin-top: 10px;
+                        padding-left: 31px;
+
+                        .burgerPopupWorkingTimeTitle {
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 120%;
+                            letter-spacing: -0.14px;
+                            margin-bottom: 4px;
+
+                            @media only screen and (max-width: 750px) {
+                                font-size: 12px;
+                                letter-spacing: -0.12px;
+                            }
+                        }
+
+                        .burgerPopupWorkingTimeItem {
+                            color: $black;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 120%;
+                            letter-spacing: -0.16px;
+                            margin-top: 4px;
+
+                            @media only screen and (max-width: 750px) {
+                                font-size: 14px;
+                                letter-spacing: -0.14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .burgerPopupLinksWrapper {
+                margin-top: 20px;
+                padding-left: 20px;
+                padding-bottom: 30px;
+
+                .burgerPopupLink {
+                    margin-top: 10px;
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -0.16px;
+                        color: $black;
+
+                        @media only screen and (max-width: 750px) {
+                            font-size: 14px;
+                            letter-spacing: -0.14px;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.burgerHidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.burgerShow {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+}
+
+.burgerPopupContent {
+    display: flex;
+    align-items: flex-start;
+    grid-gap: 35px;
+}
+
+
+.burgerPopupCatalogContent {
+    overflow: hidden;
+    width: 270px;
+    padding-bottom: 20px;
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+
+    .burgerPopupCatalogContentItem {
+        margin-top: 15px;
+
+        .burgerPopupCatalogContentItemTitle {
+            display: flex;
+            align-items: center;
+
+            // span {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.14px;
+            color: $black;
+            // }
+
+            i {
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                @include centering;
+
+                svg {
+                    @include transition;
+                }
+            }
+        }
+
+        .burgerPopupCatalogContentItemHidden {
+            padding: 0 0 0 20px;
+            overflow: hidden;
+            -webkit-transition: all .7s ease-in-out;
+            -moz-transition: all .7s ease-in-out;
+            -o-transition: all .7s ease-in-out;
+            -ms-transition: all .7s ease-in-out;
+            transition: all .7s ease-in-out;
+
+            .burgerPopupCatalogContentItemHiddenTitle {
+                margin-top: 15px;
+
+                &:first-child {
+                    margin-top: 10px;
+                }
+
+                a {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: -0.14px;
+                    text-decoration-line: underline;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .hiddenCatalogItem {
+        .burgerPopupCatalogContentItemHidden {
+            max-height: 0;
+        }
+    }
+
+    .showCatalogItem {
+        .burgerPopupCatalogContentItemTitle {
+            i {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .burgerPopupCatalogContentItemHidden {
+            max-height: 350px;
+        }
+    }
+}
+
+.burgerCatalogHidden {
+    .burgerPopupCatalogContent {
+        max-height: 0;
+    }
+}

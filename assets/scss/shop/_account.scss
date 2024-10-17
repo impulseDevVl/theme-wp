@@ -1,0 +1,208 @@
+.woocommerce-form-row {
+    margin-bottom: 10px;
+}
+
+.woocommerce-Input {
+    width: 100%;
+}
+
+// .woocommerce-form__footer{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     grid-gap: 10px;
+//     margin-bottom: 20px;
+// }
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.wc-form-login__rememberme-checkbox {
+    margin-bottom: 10px;
+}
+
+.wc-form-login__rememberme-checkbox input[type="checkbox"] {
+    &+label {
+        align-items: center;
+    }
+
+    &+label::before {
+        border-color: #fff;
+    }
+}
+
+.woocommerce-LostPassword a {
+    text-decoration: underline;
+}
+
+.woocommerce-register-row {
+    margin: 16px 0;
+}
+
+.woocommerce-checkout-customer__wrapper .woocommerce-privacy-policy-text {
+    color: #A7A7A7;
+}
+
+.woocommerce-privacy-policy-text {
+    font-size: 12px;
+    line-height: 18px;
+    color: #EAEAEA;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+
+.woocommerce-form-row em {
+    font-size: 12px;
+}
+
+.woocommerce-EditAccountForm {
+    fieldset {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 20px 20px 10px;
+    }
+
+    label {
+        font-weight: 600;
+    }
+}
+
+.woocommerce form .show-password-input::after,
+.woocommerce-page form .show-password-input::after {
+    line-height: 140%;
+    margin-right: 20px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 18%;
+}
+
+.woocommerce-MyAccount-navigation {
+    background-color: $primary;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.woocommerce-MyAccount-navigation-link {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    a {
+        border-radius: 10px;
+        padding: 10px;
+        display: block;
+    }
+
+    &.is-active a {
+        background-color: #fff;
+    }
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    width: 75%;
+
+    form h3 {
+        margin-bottom: 16px;
+    }
+}
+
+.account-dashboard__text {
+    max-width: 750px;
+    width: 100%;
+
+    a {
+        text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    .form-row-last,
+    .form-row-first {
+        width: 100%;
+    }
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+    border-radius: 20px;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce-form-register__submit {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+label[for="user_login"]{
+    margin-bottom: 10px;
+}
+.reset_password-text{
+    margin-bottom: 16px;
+}
+@media (max-width: 1279px) {
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        width: 22%;
+        padding: 10px;
+    }
+
+    .account-dashboard__text {
+        max-width: 670px;
+    }
+}
+
+@media (max-width: 999px) {
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .woocommerce-MyAccount-navigation ul {
+        display: inline-flex;
+        width: auto;
+        flex-wrap: wrap;
+        grid-gap: 10px;
+    }
+
+    .woocommerce-MyAccount-navigation-link:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+    .woocommerce-form-register__submit {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .woocommerce-MyAccount-navigation ul{
+        grid-gap: 5px;
+    }
+    .woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .woocommerce form .show-password-input, .woocommerce-page form .show-password-input{
+        top: 1em;
+    }
+}

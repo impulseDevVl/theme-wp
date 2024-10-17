@@ -1,0 +1,491 @@
+.carrierListWrapper {
+    width: 100%;
+    @include centering();
+    margin: 50px 0 90px 0;
+
+    @media only screen and (max-width: 750px) {
+        margin: 20px 0 90px 0;
+    }
+
+    .carrierListInner {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        @media only screen and (max-width: 1400px) {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+}
+
+.carrierListItem {
+    width: 100%;
+    height: 160px;
+    background-color: $succes;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all .3s;
+
+    .carrierListItemTextWrapper {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .carrierListItemTitle {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.26px;
+            margin-right: 20px;
+            overflow: hidden;
+            height: 63px;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+            @media only screen and (max-width: 750px) {
+                font-size: 18px;
+                letter-spacing: -0.18px;
+                height: 65px;
+                -webkit-line-clamp: 3;
+            }
+        }
+
+        .carrierListItemSalary {
+            width: fit-content;
+            min-width: 120px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.18px;
+            text-align: right;
+            margin-top: 7px;
+
+            @media only screen and (max-width: 750px) {
+                margin-top: 3px;
+                font-size: 14px;
+                letter-spacing: -0.14px;
+                min-width: 95px;
+            }
+        }
+    }
+
+    .carrierListItemButton {
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        @include centering;
+        border-radius: 50px;
+
+        span {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.16px;
+
+            @media only screen and (max-width: 750px) {
+                font-size: 14px;
+                letter-spacing: -0.14px;
+            }
+        }
+
+        i {
+            @include centering;
+        }
+    }
+}
+
+.carrierPageWrapper {
+    width: 100%;
+    @include centering();
+    margin-top: 30px;
+
+    .carrierPageInner {
+        max-width: 1440px;
+        width: 100%;
+        padding: 0 60px;
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        grid-gap: 40px;
+
+        @media only screen and (max-width: 1400px) {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .carrierPageTextWrapper {
+            background-color: $grey-100;
+            padding: 30px 50px;
+            border-radius: 20px;
+
+            @media only screen and (max-width: 750px) {
+                padding: 20px 15px;
+            }
+
+            .carrierPageText {
+                h3 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    color: $black;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                        margin-top: 16px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: -0.16px;
+                    color: $black;
+                    margin-bottom: 10px;
+
+                    @media only screen and (max-width: 750px) {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -0.12px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+
+            .carrierPageSalary {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 120%;
+                color: $black;
+                width: 100%;
+                text-align: right;
+                margin-top: 20px;
+
+                @media only screen and (max-width: 750px) {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                }
+            }
+        }
+
+        .carrierPageFormWrapper {
+            .carrierPageForm {
+                background-color: $succes;
+                padding: 20px 20px 30px;
+                border-radius: 20px;
+
+                .carrierPageFormTitle {
+                    font-size: 28px;
+                    font-weight: 600;
+                    line-height: 120%;
+                    color: #fff;
+
+                    @media only screen and (max-width: 750px) {
+                        font-size: 22px;
+                    }
+                }
+
+                .carrierPageFormDescription {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: -0.16px;
+                    color: #fff;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+
+                    @media only screen and (max-width: 750px) {
+                        font-size: 14px;
+                        letter-spacing: -0.14px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.carrierPageFormFileWrapper {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+
+    input {
+        display: none;
+    }
+
+    label {
+        width: 100%;
+        border: 1px solid #fff;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 15px;
+        height: 48.8px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.14px;
+            color: $grey;
+            height: 16.8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .active {
+            color: $black;
+        }
+
+        i {
+            margin-left: 10px;
+            @include centering;
+        }
+    }
+}
+
+.carrierPageSliderWrapper {
+    width: 100%;
+    margin-bottom: 90px;
+    @include centering();
+    margin-top: 65px;
+    position: relative;
+
+    @media only screen and (max-width: 750px) {
+        flex-direction: column-reverse;
+        margin-top: 45px;
+        margin-bottom: 60px;
+    }
+
+    .carrierPageSwiperNavigation {
+        margin: 0 50px;
+        position: absolute;
+        max-width: 1380px;
+        width: 100%;
+        top: 70%;
+        transform: translateY(-70%);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1400px) {
+            margin: 0 10px;
+            padding: 0;
+            top: 0;
+            transform: translateY(0);
+            right: 0;
+            width: fit-content;
+        }
+
+        @media only screen and (max-width: 750px) {
+            position: static;
+            margin-top: 15px;
+        }
+
+        .carrierPageSwiperNavigationPrev,
+        .carrierPageSwiperNavigationNext {
+            cursor: pointer;
+
+            svg {
+                path {
+                    @include transition;
+                }
+
+                @media only screen and (max-width: 1400px) {
+                    circle {
+                        fill: $primary
+                    }
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $primary;
+
+                        @media only screen and (max-width: 1400px) {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+
+            svg {
+                path {
+                    fill: $black !important;
+                }
+            }
+        }
+    }
+
+    .carrierPageSliderInner {
+        max-width: 1320px;
+        width: 100%;
+        margin: 0 60px;
+        overflow: hidden;
+
+        @media only screen and (max-width: 1400px) {
+            max-width: 100%;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .carrierPageSliderTitle {
+            h2 {
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: -0.32px;
+                color: $black;
+                user-select: none;
+            }
+        }
+
+        .carrierPageSlider {
+            margin-top: 30px;
+
+            @media only screen and (max-width: 750px) {
+                margin-top: 20px;
+            }
+
+            .carrierPageSwiper {
+                a {
+                    width: 100%;
+                    height: 100%;
+
+                    .carrierPageSwiperSlideWrapper {
+                        width: 100%;
+                        height: 160px;
+                        background-color: $succes;
+                        border-radius: 20px;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        .carrierPageSwiperSlideTextWrapper {
+                            display: flex;
+                            width: 100%;
+                            align-items: flex-start;
+                            justify-content: space-between;
+
+                            .carrierPageSwiperSlideTitle {
+                                color: #fff;
+                                font-size: 26px;
+                                font-weight: 600;
+                                line-height: 120%;
+                                letter-spacing: -0.26px;
+                                margin-right: 20px;
+                                overflow: hidden;
+                                height: 63px;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+
+                                @media only screen and (max-width: 750px) {
+                                    font-size: 18px;
+                                    letter-spacing: -0.18px;
+                                    height: 65px;
+                                    -webkit-line-clamp: 3;
+                                }
+                            }
+
+                            .carrierPageSwiperSlideSalary {
+                                width: fit-content;
+                                min-width: 120px;
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 120%;
+                                letter-spacing: -0.18px;
+                                text-align: right;
+                                margin-top: 7px;
+
+                                @media only screen and (max-width: 750px) {
+                                    margin-top: 3px;
+                                    font-size: 14px;
+                                    letter-spacing: -0.14px;
+                                    min-width: 95px;
+                                }
+                            }
+                        }
+
+                        .carrierPageSwiperSlideButton {
+                            padding: 10px 20px;
+                            border: 1px solid #fff;
+                            @include centering;
+                            border-radius: 50px;
+
+                            span {
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 120%;
+                                letter-spacing: -0.16px;
+
+                                @media only screen and (max-width: 750px) {
+                                    font-size: 14px;
+                                    letter-spacing: -0.14px;
+                                }
+                            }
+
+                            i {
+                                @include centering;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
